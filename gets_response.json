@@ -1,0 +1,1018 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.20314306299997,
+                    33.453612382000074,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.07953968299995,
+                    33.487322394000046,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 2,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.14568281399994,
+                    33.512860283000066,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 3,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.17990358499998,
+                    33.49830368600004,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 4,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.22127496399997,
+                    33.512860283000066,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 5,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.12151958199996,
+                    33.47982263500006,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 6,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.15144679499997,
+                    33.49478624100004,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 7,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.06665302499994,
+                    33.51785513500005,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 8,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.13211880399996,
+                    33.53905357700006,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 9,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.02300917299993,
+                    33.46859993000004,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 10,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.04857199999998,
+                    33.48294005300005,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 11,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00003",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0003",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 12,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.09034540199997,
+                    33.46298857800008,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 12,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00003",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0003",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.09907417199997,
+                    33.51723165100003,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 13,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00003",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0003",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 14,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.12151958199996,
+                    33.501644561000035,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 14,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00003",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0003",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.19010277899997,
+                    33.530948290000026,
+                    0
+                ]
+            },
+            "properties": {
+                "OBJECTID": 15,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00003",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0003",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 16,
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -81.98709252699996,
+                        33.47480882900004,
+                        0
+                    ],
+                    [
+                        -82.00599056399994,
+                        33.47583034500008,
+                        0
+                    ],
+                    [
+                        -82.01952564499999,
+                        33.47838413300008,
+                        0
+                    ],
+                    [
+                        -82.03331610499998,
+                        33.47838413300008,
+                        0
+                    ],
+                    [
+                        -82.03995595599997,
+                        33.48808853100007,
+                        0
+                    ],
+                    [
+                        -82.03280534699996,
+                        33.49294073000004,
+                        0
+                    ],
+                    [
+                        -82.04148822899998,
+                        33.50596505300007,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "OBJECTID": 16,
+                "Shape_Length": 0.08254327053335814,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 17,
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -82.12984932299997,
+                        33.47378731400005,
+                        0
+                    ],
+                    [
+                        -82.14185213099995,
+                        33.46791359900004,
+                        0
+                    ],
+                    [
+                        -82.14287364599994,
+                        33.455910792000054,
+                        0
+                    ],
+                    [
+                        -82.10839749699994,
+                        33.455144655000026,
+                        0
+                    ],
+                    [
+                        -82.10507757099998,
+                        33.479916407000076,
+                        0
+                    ],
+                    [
+                        -82.07315521099997,
+                        33.47378731400005,
+                        0
+                    ],
+                    [
+                        -82.06855839099995,
+                        33.482214817000056,
+                        0
+                    ],
+                    [
+                        -82.05144800599999,
+                        33.479661028000066,
+                        0
+                    ],
+                    [
+                        -82.04940497499996,
+                        33.46944587300004,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "OBJECTID": 17,
+                "Shape_Length": 0.15470948428584136,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": null,
+            "properties": {
+                "OBJECTID": 3,
+                "Shape": null,
+                "Shape_Length": null,
+                "classification": null,
+                "temporal": null,
+                "temporalend": null,
+                "trigraph": null,
+                "be": null,
+                "title": null,
+                "activity": null,
+                "comment": null,
+                "confidence": null,
+                "description": null,
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": null,
+                "timestamp": null,
+                "type": null,
+                "mgrs": null,
+                "orgid": null,
+                "aor": null,
+                "link": null,
+                "sensor": null,
+                "docid": null,
+                "classificationsource": null,
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 18,
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.13379809399999,
+                            33.53107594800008,
+                            0
+                        ],
+                        [
+                            -82.12898634699997,
+                            33.52626420100006,
+                            0
+                        ],
+                        [
+                            -82.11747999599999,
+                            33.52710102700007,
+                            0
+                        ],
+                        [
+                            -82.11653856699996,
+                            33.53442325000003,
+                            0
+                        ],
+                        [
+                            -82.12689428299996,
+                            33.536201504000076,
+                            0
+                        ],
+                        [
+                            -82.13379809399999,
+                            33.53107594800008,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "OBJECTID": 18,
+                "Shape_Length": 0.04482984353289648,
+                "Shape_Area": 0.00012398731754909015,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00001",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0001",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 19,
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.08693586399994,
+                            33.50293769000007,
+                            0
+                        ],
+                        [
+                            -82.08170570399994,
+                            33.50638959500003,
+                            0
+                        ],
+                        [
+                            -82.07605713199996,
+                            33.504715944000054,
+                            0
+                        ],
+                        [
+                            -82.07333744899995,
+                            33.50973689700004,
+                            0
+                        ],
+                        [
+                            -82.06957173399996,
+                            33.51402562800007,
+                            0
+                        ],
+                        [
+                            -82.07793998999995,
+                            33.51590848500007,
+                            0
+                        ],
+                        [
+                            -82.08212411699998,
+                            33.514862453000035,
+                            0
+                        ],
+                        [
+                            -82.08243792699994,
+                            33.50963229400003,
+                            0
+                        ],
+                        [
+                            -82.08651745099996,
+                            33.50733102400005,
+                            0
+                        ],
+                        [
+                            -82.08693586399994,
+                            33.50293769000007,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "OBJECTID": 19,
+                "Shape_Length": 0.0508024518914583,
+                "Shape_Area": 0.0001100638418751912,
+                "classification": "UNCLASSIFIED",
+                "temporal": "2020-04-22T14:12:00Z",
+                "temporalend": "2020-04-22T14:12:00Z",
+                "trigraph": "USA",
+                "be": "0000-00002",
+                "title": "Title goes here",
+                "activity": " ",
+                "comment": " ",
+                "confidence": 0,
+                "description": "something happened here",
+                "entityid": null,
+                "equipmentcode": null,
+                "item_type": null,
+                "movementobject": null,
+                "movementobjectcount": null,
+                "name": null,
+                "summary": null,
+                "analysis": "<HTML>blah blah blah</HTML>(UNCLASSIFIED) Some analytical statement goes here.",
+                "timestamp": "2020-04-23T00:01:59Z",
+                "type": null,
+                "mgrs": null,
+                "orgid": "MYORG",
+                "aor": "NORTHCOM",
+                "link": null,
+                "sensor": null,
+                "docid": "GETS-202004232359-NORTHCOM-0002",
+                "classificationsource": "myself",
+                "declassifyon": null
+            }
+        }
+    ]
+}
