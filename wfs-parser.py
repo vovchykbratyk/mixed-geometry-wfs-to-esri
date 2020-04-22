@@ -31,7 +31,7 @@ class WFSQuery:
     """
 
     def __init__(self, base_url, payload):
-        """Base WFS object"""
+        """WFS query constructor"""
         self.base_url = base_url
         self.__payload = payload
 
@@ -75,7 +75,7 @@ class WFSQuery:
 
     def do_query(self):
         """
-        Use YAPKI to establish session and execute query(s).
+        Uses YAPKI to establish session and execute query(s).
         """
         s = yapki.Session(cert=yapki.get_windows_cert())
         s.headers.update(yapki.USER_AGENTS['Firefox'])
@@ -90,6 +90,7 @@ class SOMFeatures:
     """
 
     def __init__(self, gdb, fc_prefix, fields, sr, json_input):
+        """Esri SOM object constructor"""
         self.gdb = gdb
         self.fc_prefix = fc_prefix
         self.fields = fields
@@ -204,12 +205,7 @@ class SOMFeatures:
 
     def make_featureclass(self, rows, fc_name, geo_type, geo_token):
         """
-
-        :param rows:
-        :param fc_name:
-        :param geo_type:
-        :param geo_token:
-        :return:
+        Reusable feature class creation logic
         """
         if not arcpy.Exists(fc_name):
             fc = arcpy.CreateFeatureclass_management(self.gdb, fc_name, geo_type, spatial_reference=self.sr)
@@ -230,7 +226,7 @@ class SOMFeatures:
 
     def make_features(self, parsed_json):
         """
-        Coordinates make_featureclass method for each geometric type.
+        Orchestrates make_featureclass() per geometric primitive
         """
         # If any of the parsed JSON lists contain more than 0 rows, create a unique feature class for it.
         token_point = "SHAPE@XY"
@@ -257,7 +253,7 @@ class SOMFeatures:
         return stats
 
 """
-Testing off static data
+Testing on static data
 """
 
 
@@ -297,11 +293,11 @@ if __name__ == '__main__':
     ['declassifyon', 'TEXT', 'DeclassOn', 64]
     ]
 
-    json_dir = "C:/Users/ericc/PycharmProjects/mixed-geometry-wfs-to-esri"
+    json_dir = os.getcwd()
     json_file = "gets_response.json"
     gr = os.path.join(json_dir, json_file)
 
-    gdb_dir = "C:/Temp"
+    gdb_dir = os.getcwd()
     gdb_name = "test_gdb"
 
     geodatabase = os.path.join(gdb_dir, gdb_name + ".gdb")
