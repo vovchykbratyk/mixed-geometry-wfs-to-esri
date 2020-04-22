@@ -75,11 +75,11 @@ class WFSQuery:
 
     def do_query(self):
         """
-        Uses YAPKI to establish session and execute query(s).
+        Uses YAPKI to establish client PKI context and execute query(s).
         """
         s = yapki.Session(cert=yapki.get_windows_cert())
         s.headers.update(yapki.USER_AGENTS['Firefox'])
-        query_url = self.base_url +  "%20AND%20".join(WFSQuery.get_payload())
+        query_url = self.base_url + "%20AND%20".join(WFSQuery.get_payload())
         r = s.get(query_url)
         return r.json()
 
