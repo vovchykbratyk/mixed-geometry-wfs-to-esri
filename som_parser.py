@@ -9,7 +9,9 @@ class SOMFeatures:
     """
 
     def __init__(self, gdb, fc_prefix, fields, sr, json_input):
-        """Esri SOM object constructor"""
+        """
+        Esri SOM object constructor
+        """
         self.gdb = gdb
         self.fc_prefix = fc_prefix
         self.fields = fields
