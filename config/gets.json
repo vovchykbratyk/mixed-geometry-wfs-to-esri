@@ -1,0 +1,5 @@
+{
+  "gets_server": [
+    "https://gets.geoint.com/geoserver/wfs?request=GetFeature&service=wfs&version=1.0&typeName=gets_som"
+  ]
+}

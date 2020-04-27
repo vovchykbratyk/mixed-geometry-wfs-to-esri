@@ -1,79 +1,19 @@
 import arcpy
+from datetime import datetime, timedelta
+import json
 import os
 import som_parser as sp
 import wfs_query as wq
-import arcpy
 
-
-class ToolValidator(object):
-    """
-    Class for validating a tool's parameter values and controlling
-    the behavior of the tool's dialog.
-    """
-
-    def __init__(self):
-        """
-        Setup arcpy and the list of tool parameters.
-
-        -------------------
-        Parameter List
-        -------------------
-        * 0: Select whether file or service (Value list: JSON/GeoJSON File; GETS WFS)
-        * 1: File input (File: If 0 = JSON/GeoJSON File)
-        * 2: Start date (Date) - Optional; defaults to (today - 5 days)
-        * 3: Stop date (Date) - Optional; defaults to today
-        * 4: Country Code (String) - Optional
-        * 5: BE (String) - Optional
-        * 6: Organization (String) - Optional
-        * 7: AOR - Optional (Value List)
-        * 8: Suppress Sensor? (True/False) - Issues a NOT for a particular sensor
-        * 9: Max Features to Return (Int) - Optional; defaults to 5000
-        * 10: Output Name Prefix (String)
-
-        -------------------
-        Parameter Logic
-        -------------------
-        * Start/Stop dates will always be included
-        * If 0 == JSON/GeoJSON File, only enable self.params[10] (output name).
-        * If 0 == GETS WFS, Disable self.params[1]; Enable self.params[2-10]
-        * If Country Code AND BE AND Organization AND AOR are false, fetch BBOX of current view.
-        """
-        self.params = arcpy.GetParameterInfo()
-
-    def initializeParameters(self):
-        """
-        Refine the properties of a tool's parameters. This method is
-        called when the tool is opened.
-        """
-
-    def isLicensed(self):
-        """Set whether tool is licensed to execute."""
-        return True
-
-    def updateParameters(self):
-        """Modify the values and properties of parameters before internal
-        validation is performed. This method is called whenever a parameter
-        has been changed."""
-        if self.params[0].value == "JSON/GeoJSON File":
-            self.params[1].enabled = True
-            self.params[2].enabled = False
-        elif self.params[0].value == "GETS WFS":
-            self.params[1].enabled = False
-            self.params[2].enabled = True
-
-    def updateMessages(self):
-        """Modify the messages created by internal validation for each tool
-        parameter. This method is called after internal validation."""
-
-"""
-Testing on static data
-"""
 
 if __name__ == '__main__':
-    # Set overwrite
+    # Set environment variables
+    current_project = arcpy.mp.ArcGISProject('current')
+    current_db = current_project.defaultGeodatabase
+
     arcpy.env.overwriteOutput = True
 
-    # Test parameters
+    # Fields
     field_list = [
         ['secclass', 'TEXT', 'Classification', 64],
         ['temporal', 'TEXT', 'Temporal', 32],
@@ -104,39 +44,57 @@ if __name__ == '__main__':
         ['src_class', 'TEXT', 'ClassSource', 64],
         ['declassifyon', 'TEXT', 'DeclassOn', 64]
     ]
-    wfs_in = arcpy.GetParameter(0)  # Get whether input is a file or a service call
 
-    if wfs_in == "File":
+    # Parameters
+    input_type = arcpy.GetParameter(0)  # Choice of file or service call
+    input_file = arcpy.GetParameter(1)  # Input GeoJSON file
+    output_name_prefix = arcpy.GetParameterAsText(2)  # Output name prefix
+    sdate = arcpy.GetParameter(3)  # Start date
+    edate = arcpy.GetParameter(4)  # End date
+    be = arcpy.GetParameterAsText(5)  # BE Number
+    aor = arcpy.GetParameterAsText(6)  # AOR
+    orgid = arcpy.GetParameterAsText(7)  # Organization ID
+    trigraph = arcpy.GetParameterAsText(8)  # Country Code (ISO-3)
+    docid = arcpy.GetParameterAsText(9)  # DOCID
+    bbox = arcpy.GetParameterAsText(10)  # Bounding Box
+
+    sr = arcpy.SpatialReference(4326)
+
+    if input_type == "File":
+        with open(input_file, 'r') as jf:
+            gets_data = sp.SOMFeatures(current_db, output_name_prefix, field_list, sr, jf)
+            parsed_gets_data = gets_data.parse_json()
+            feature_classes = gets_data.make_features(parsed_gets_data)
+
+            for fcs in feature_classes:
+                arcpy.AddMessage(f"Created feature class {fcs['name']} with {fcs['rows']} rows.")
+    elif input_type == "GETS WFS Query":
+        json_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config/gets.json')
+        try:
+            with open(json_file) as f:
+                config_json = json.load(f)
+                gets_base_url = config_json['gets_server']
+        except IOError:
+            arcpy.AddError('Configuration file %s not found.' % json_file)
+        except ValueError:
+            arcpy.AddError('Configuration file %s is not valid JSON.' %
+                           json_file)
+
+        payload_raw = {
+            'sdate': sdate,
+            'edate': edate,
+            'be': be,
+            'aor': aor,
+            'orgid': orgid,
+            'trigraph': trigraph,
+            'docid': docid,
+            'bbox': bbox
+        }
+        payload_items = {k: v for k, v in payload_raw.items() if v is not None}
+        q = wq.WFSQuery(base_url=gets_base_url, payload=payload_items)
+        print(q)
 
 
 
 
 
-
-    json_dir = os.getcwd()
-    json_file = "gets_response.json"
-    gr = os.path.join(json_dir, json_file)
-
-    gdb_dir = os.getcwd()
-    gdb_name = "test_gdb"
-
-    geodatabase = os.path.join(gdb_dir, gdb_name + ".gdb")
-
-    if not arcpy.Exists(geodatabase):
-        g = arcpy.CreateFileGDB_management(gdb_dir, gdb_name)
-    else:
-        g = geodatabase
-
-    # Set environment
-    arcpy.env.workspace = geodatabase
-
-    spatial_ref = arcpy.SpatialReference(4236)
-
-    with open(gr, "r") as gets_json_file:
-        gets_data = sp.SOMFeatures(geodatabase, "testrun", field_list, spatial_ref, gets_json_file)
-
-    parsed_gets_data = gets_data.parse_json()
-    feature_classes = gets_data.make_features(parsed_gets_data)
-
-    for fcs in feature_classes:
-        print(f"Feature class name: {fcs['name']} | Rows: {fcs['rows']}")
