@@ -93,8 +93,4 @@ if __name__ == '__main__':
         payload_items = {k: v for k, v in payload_raw.items() if v is not None}
         q = wq.WFSQuery(base_url=gets_base_url, payload=payload_items)
         print(q)
-
-
-
-
-
+        arcpy.AddMessage(f"Issuing query to: \n{q}")
