@@ -1,3 +1,11 @@
+"""
+This tool authenticates a user to a GeoServer upon presenting a valid
+PKCS12 cert, issues a query based on various CQL parameters and converts
+the mixed-geometry response into a set of feature classes. Alternatively
+a user is able to issue a json flat file as an input.
+"""
+
+
 import arcpy
 from datetime import datetime, timedelta
 import json

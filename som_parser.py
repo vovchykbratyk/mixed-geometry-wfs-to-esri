@@ -1,3 +1,8 @@
+"""
+This is the feature/geometry handler and attribute extractor.
+"""
+
+
 import arcpy
 from datetime import datetime
 import json

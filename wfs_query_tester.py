@@ -1,3 +1,9 @@
+"""
+This file is meant only for testing the tool with canned
+data instead of ArcGIS Pro-captured user parameters.
+"""
+
+
 import arcpy
 from datetime import datetime, timedelta
 import json

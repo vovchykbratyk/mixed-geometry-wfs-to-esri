@@ -1,3 +1,7 @@
+"""
+This script contains the main WFS query class and brokers the PKI connection.
+"""
+
 from datetime import datetime, timedelta
 
 try:  # check if yapki installed and if not, go get it (Requires site configuration)
