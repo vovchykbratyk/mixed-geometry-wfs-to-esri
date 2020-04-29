@@ -8,8 +8,8 @@ import wfs_query as wq
 
 if __name__ == '__main__':
     # Set environment variables
-    current_project = arcpy.mp.ArcGISProject('current')
-    current_db = current_project.defaultGeodatabase
+    # current_project = arcpy.mp.ArcGISProject('current')
+    # current_db = current_project.defaultGeodatabase
 
     arcpy.env.overwriteOutput = True
 
@@ -46,35 +46,52 @@ if __name__ == '__main__':
     ]
 
     # Parameters
-    input_type = arcpy.GetParameter(0)  # Choice of file or service call
-    input_file = arcpy.GetParameterAsText(1)  # Input GeoJSON file
-    output_name_prefix = arcpy.GetParameterAsText(2)  # Output name prefix
-    start_date = arcpy.GetParameter(3)  # Start date
-    end_date = arcpy.GetParameter(4)  # End date
-    be = arcpy.GetParameterAsText(5)  # BE Number
-    aor = arcpy.GetParameterAsText(6)  # AOR
-    orgid = arcpy.GetParameterAsText(7)  # Organization ID
-    trigraph = arcpy.GetParameterAsText(8)  # Country Code (ISO-3)
-    docid = arcpy.GetParameterAsText(9)  # DOCID
-    bbox = arcpy.GetParameterAsText(10)  # Bounding Box
+    #input_type = arcpy.GetParameter(0)  # Choice of file or service call
+    #input_file = arcpy.GetParameter(1)  # Input GeoJSON file
+    #output_name_prefix = arcpy.GetParameterAsText(2)  # Output name prefix
+    #sdate = arcpy.GetParameter(3)  # Start date
+    #edate = arcpy.GetParameter(4)  # End date
+    #be = arcpy.GetParameterAsText(5)  # BE Number
+    #aor = arcpy.GetParameterAsText(6)  # AOR
+    #orgid = arcpy.GetParameterAsText(7)  # Organization ID
+    #trigraph = arcpy.GetParameterAsText(8)  # Country Code (ISO-3)
+    #docid = arcpy.GetParameterAsText(9)  # DOCID
+    #bbox = arcpy.GetParameterAsText(10)  # Bounding Box
 
     sr = arcpy.SpatialReference(4326)
 
-    if input_type == "File":
-        with open(input_file, 'r') as jf:
-            gets_data = sp.SOMFeatures(current_db, output_name_prefix, field_list, sr, jf)
-            parsed_gets_data = gets_data.parse_json()
-            feature_classes = gets_data.make_features(parsed_gets_data)
+    # Testing
+    input_type = 'GETS WFS Query'
 
-            for fcs in feature_classes:
-                arcpy.AddMessage(f"Created feature class {fcs['name']} with {fcs['rows']} rows.")
+    #sdate = datetime.now() - timedelta(days=3)
+    #sdate = None
+    sdate = ''
+    #edate = datetime.now()
+    #edate = None
+    edate = ''
+    be = '1234-123454567899'
+    aor = ''
+    orgid = ''
+    trigraph = ''
+    docid = ''
+    bbox = ''
+
+    output_prefix = 'test_out_'
+
+    if input_type == "File":
+        pass
+        # with open(input_file, 'r') as jf:
+        #     gets_data = sp.SOMFeatures(current_db, output_name_prefix, field_list, sr, jf)
+        #     parsed_gets_data = gets_data.parse_json()
+        #     feature_classes = gets_data.make_features(parsed_gets_data)
+        #
+        #     for fcs in feature_classes:
+        #         arcpy.AddMessage(f"Created feature class {fcs['name']} with {fcs['rows']} rows.")
     elif input_type == "GETS WFS Query":
 
-
-
         cql_raw = {
-            'sdate': start_date,
-            'edate': end_date,
+            'sdate': sdate,
+            'edate': edate,
             'be': be,
             'aor': aor,
             'orgid': orgid,
@@ -82,9 +99,12 @@ if __name__ == '__main__':
             'docid': docid,
             'bbox': bbox
         }
-        b_url = "https://gets.geoint.com/geoserver/"
 
-        q = wq.WFSQuery(b_url, **cql_raw)
+        q = wq.WFSQuery(get_gets_url(), **cql_raw)
         print(q.kwargs)
         print(q.user_cql)
-        arcpy.AddMessage(q.url)
+        print(q.url)
+
+
+
+

@@ -1,6 +1,6 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
-try:  # check if yapki installed and if not, go get it
+try:  # check if yapki installed and if not, go get it (Requires site configuration)
     import yapki
 except ImportError:
     # import subprocess
@@ -27,51 +27,52 @@ class WFSQuery:
     Sets up a WFS query (currently only 1.0.0) and obtains a GeoJSON result.
     """
 
-    def __init__(self, base_url, payload):
+    def __init__(self, base_url, **kwargs):
         """WFS query constructor"""
         self.base_url = base_url
-        self.__payload = payload
+        self.kwargs = kwargs
+        self.user_cql = []
 
-    def get_payload(self):
-        """Payload getter"""
-        return self.__payload
+        if 'sdate' in self.kwargs:
+            if self.kwargs['sdate']:
+                sdate = f"temporal%20%3E%20%27{self.kwargs['sdate'].strftime('%Y-%m-%dT%H:%M:%S')}%27"  # temporal > 'value'
+                self.user_cql.append(sdate)
+            else:
+                sdate = f"temporal%20%3E%20%27{(datetime.now() - timedelta(days=3)).strftime('%Y-%m-%dT%H:%M:%SZ')}%27"
+                self.user_cql.append(sdate)
+        if 'edate' in self.kwargs:
+            if self.kwargs['edate']:
+                edate = f"temporal%20%3C%20%27{self.kwargs['edate'].strftime('%Y-%m-%dT%H:%M:%S')}%27"  # temporal < 'value'
+                self.user_cql.append(edate)
+            else:
+                edate = f"temporal%20%3C%20%27{datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')}%27"
+                self.user_cql.append(edate)
+        if 'be' in self.kwargs:
+            if len(self.kwargs['be']) > 0:
+                be = f"be%20LIKE%20%27{self.kwargs['be'][:10]}%25%27"  # be LIKE 'value%'
+                self.user_cql.append(be)
+        if 'aor' in self.kwargs:
+            if len(self.kwargs['aor']) > 0:
+                aor = f"aor%20%3D%20%27{self.kwargs['aor']}%27"  # aor = 'value'
+                self.user_cql.append(aor)
+        if 'orgid' in self.kwargs:
+            if len(self.kwargs['orgid']) > 0:
+                orgid = f"orgid%20%3D%20%27{self.kwargs['orgid']}%27"  # orgid = 'value'
+                self.user_cql.append(orgid)
+        if 'trigraph' in self.kwargs:
+            if len(self.kwargs['trigraph']) > 0:
+                trigraph = f"trigraph%20%3D%20%27{self.kwargs['trigraph']}%27"  # trigraph = 'value'
+                self.user_cql.append(trigraph)
+        if 'docid' in self.kwargs:
+            if len(self.kwargs['docid']) > 0:
+                docid = f"docid%20LIKE%20%27{self.kwargs['docid']}%25%27"  # docid LIKE 'value%'
+                self.user_cql.append(docid)
+        if 'BBOX' in self.kwargs:
+            if len(self.kwargs['BBOX']) > 0:
+                bbox = f"AND%20%BBOX(corners, {self.kwargs['BBOX']})"  # AND BBOX(corners, coordinates)
+                self.user_cql.append(bbox)
 
-    def set_payload(self, **kwargs):
-        """
-        Payload setter.  Assembles CQL query parameters, URL percent encodes them,
-         and returns it as a list object.
-        """
-        self.__payload = []
-        if 'edate' in kwargs:
-            edate = f"temporal%20%3C%20%27{kwargs['edate']}%27"  # temporal < 'value'
-            self.__payload.append(edate)
-        else:
-            edate = f"temporal%20%3C%20%27{datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')}%27"
-            self.__payload.append(edate)
-        if 'sdate' in kwargs:
-            sdate = f"temporal%20%3E%20%27{kwargs['sdate']}%27"  # temporal > 'value'
-            self.__payload.append(sdate)
-        else:
-            sdate = f"temporal%20%3E%20%27{(datetime.now() - timedelta(days=3)).strftime('%Y-%m-%dT%H:%M:%SZ')}%27"
-            self.__payload.append(sdate)
-        if 'be' in kwargs:
-            be = f"be%20LIKE%20%27{kwargs['be']}%25%27"  # be LIKE 'value%'
-            self.__payload.append(be)
-        if 'aor' in kwargs:
-            aor = f"aor%20%3D%20%27{kwargs['aor']}%27"  # aor = 'value'
-            self.__payload.append(aor)
-        if 'orgid' in kwargs:
-            orgid = f"orgid%20%3D%20%27{kwargs['orgid']}%27"  # orgid = 'value'
-            self.__payload.append(orgid)
-        if 'trigraph' in kwargs:
-            trigraph = f"trigraph%20%3D%20%27{kwargs['trigaph']}%27"  # trigraph = 'value'
-            self.__payload.append(trigraph)
-        if 'docid' in kwargs:
-            docid = f"docid%20LIKE%20%27{kwargs['docid']}%25%27"  # docid LIKE 'value%'
-            self.__payload.append(docid)
-        if 'BBOX' in kwargs:
-            bbox = f"AND%20%BBOX(corners, {kwargs['BBOX']})"  # AND BBOX(corners, coordinates)
-            self.__payload.append(bbox)
+        self.url = self.base_url + str("%20AND%20".join(self.user_cql))
 
     def do_query(self):
         """
@@ -79,6 +80,5 @@ class WFSQuery:
         """
         s = yapki.Session(cert=yapki.get_windows_cert())
         s.headers.update(yapki.USER_AGENTS['Firefox'])
-        query_url = self.base_url + "%20AND%20".join(WFSQuery.get_payload(self))
-        r = s.get(query_url)
+        r = s.get(self.url)
         return r.json()
