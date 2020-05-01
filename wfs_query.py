@@ -76,7 +76,7 @@ class WFSQuery:
                 bbox = f"AND%20%BBOX(corners, {self.kwargs['BBOX']})"  # AND BBOX(corners, coordinates)
                 self.user_cql.append(bbox)
 
-        self.url = self.base_url + str("%20AND%20".join(self.user_cql))
+        self.url = self.base_url + "&cql_filter=" + str("%20AND%20".join(self.user_cql))
 
     def do_query(self):
         """
